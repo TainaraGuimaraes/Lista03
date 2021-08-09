@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Contatos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/ContatoController.js"></script>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link href="estilos.css" rel="stylesheet" type="text/css"/>
+        
+        <script>
+            let contatoController = new ContatoController();
+            contatoController.listar();
+        </script>
+        
+    </head>
+    <body>
+        
+        <div id="quadro1">
+            <h1>Novo Contato</h1>
+          
+
+        
+        <label>Nome:</label><input type="text" required id="nomeCompleto" />
+        <br><br>
+        <label>Telefone:</label><input type="text" required id="telefone" />
+        <br><br>
+        
+        
+        <button type="button" id="confirmar" onclick="contatoController.confirmar()">Confirmar</button>
+        
+        
+        <button type="button" id="limpar" onclick="contatoController.limpar()">Limpar</button>
+        <br><br>
+ 
+       
+        <br><br>
+        <div id="quadro2">
+            
+            <h1>Lista de Contatos</h1>
+            <br><br>
+            
+        <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
+        </table>
+            </div>
+        <br><br>
+        </div>
+    </body>
+</html>

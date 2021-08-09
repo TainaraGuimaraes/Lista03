@@ -1,0 +1,74 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5 de ago. de 2021, 23:14:06
+    Author     : Suporte
+*/
+
+
+#quadro1{
+    position: absolute; 
+    top: 0%; /*Distancia do topo*/
+    left: 20%; /*Distancia do da esquerda*/
+    width: 50%; /*Largura*/
+    height: 260%; /*Tamanho*/
+    border: 5px solid #8B8989; /*Borda*/
+    padding: 2%; /*EspaÃ§o entre o conteudo e a borda*/
+    background:#ffffff; /*Cor de fundo*/
+    }
+
+    p{
+        font-family: arial; /*Fonte*/
+        font-weight: bold; /*Negrito*/
+        font-size: 12pt; /*Tamanho da Fonte*/
+    }
+    
+    h1{
+        font-family: arial; /*Fonte*/
+        font-weight: bold; /*Negrito*/
+        text-align: center; /*Alinha texto no centro*/
+        font-size: 16pt; /*Tamanho da Fonte*/
+        color: black;
+    }
+    
+    h2{
+        font-family: arial; /*Fonte*/
+        font-size: 14pt; /*Tamanho da Fonte*/
+        color: red; /*Cor da letra*/
+    }
+    
+    li{
+        font-size: 12pt; /*Tamanho da Fonte*/
+    }
+    
+    body{
+        background: #CDC9C9; /*Cor de fundo*/
+    }
+    
+    a{
+       font-family: arial; /*Fonte*/
+       font-size: 14pt; /*Tamanho da Fonte*/
+       color: red; /*Cor da letra*/ 
+    }
+    
+    table{
+        border: red;
+    }
+    
+    #quadro2{
+    position: absolute; 
+    top: 15%; /*Distancia do topo*/
+    left: 10%; /*Distancia do da esquerda*/
+    width: 80%; /*Largura*/
+    height: 70%; /*Tamanho*/
+    /* border: 5px solid #ff00ff; Borda*/
+    padding: 2%; /*EspaÃ§o entre o conteudo e a borda*/
+    background:#ffffff; /*Cor de fundo*/
+    }
+    
+    
+
+
