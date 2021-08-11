@@ -22,6 +22,8 @@ public class Contato {
     private String nomeCompleto;
     private String telefone;
 
+
+
     public int getId() {
         return id;
     }
@@ -29,6 +31,7 @@ public class Contato {
     public void setId(int id) {
         this.id = id;
     }
+    
 
     public String getNomeCompleto() {
         return nomeCompleto;

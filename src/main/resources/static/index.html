@@ -24,7 +24,7 @@ and open the template in the editor.
         
         <div id="quadro1">
             <h1>Novo Contato</h1>
-          
+
 
         
         <label>Nome:</label><input type="text" required id="nomeCompleto" />
@@ -38,7 +38,17 @@ and open the template in the editor.
         
         <button type="button" id="limpar" onclick="contatoController.limpar()">Limpar</button>
         <br><br>
- 
+
+        <hr>
+        
+       
+        <label>Pesquisar Nome:</label>
+        <input type="text" oninput="contatoController.pesquisarNomeCompleto()" id="pesquisarNomeCompleto" />
+        <br><br>
+        <label>Pesquisar Telefone:</label>
+        <input type="text" oninput="contatoController.pesquisarTelefone()" id="pesquisarTelefone" />
+      
+     
        
         <br><br>
         <div id="quadro2">

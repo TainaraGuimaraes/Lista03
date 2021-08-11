@@ -13,6 +13,9 @@ class ContatoController {
 
             let nomeCompletoCell = linha.insertCell();
             nomeCompletoCell.innerHTML = lista[i].nomeCompleto;
+            
+            let telefoneCell = linha.insertCell();
+            telefoneCell.innerHTML = lista[i].telefone;
 
 
             let apagarCell = linha.insertCell();
@@ -65,6 +68,62 @@ class ContatoController {
         });
 
     }
+    
+    pesquisarNomeCompleto() {
+        let pesquisaNomeCompleto = document.getElementById("pesquisarNomeCompleto").value;
+        fetch(`/api/contatos/pesquisa/nomeCompleto/?contem=${pesquisaNomeCompleto}`, {method: "GET"})
+        
+                .then((resultado) => {
+                    if (resultado.ok) {
+                        // retorno ok
+                        resultado.json().then(
+                                (lista) => {
+                            this.carregarLista(lista);
+                            console.log(lista);
+                        }
+                        );
+
+                    } else {
+                        
+                        // tratar o erro 
+                        console.log("Erro na excecução");
+
+
+                    }
+
+                }
+
+                );
+
+    }
+    
+    pesquisarTelefone() {
+        let pesquisaTelefone = document.getElementById("pesquisarTelefone").value;
+        fetch(`/api/contatos/pesquisa/telefone/?contem=${pesquisaTelefone}`, {method: "GET"})
+        
+                .then((resultado) => {
+                    if (resultado.ok) {
+                        // retorno ok
+                        resultado.json().then(
+                                (lista) => {
+                            this.carregarLista(lista);
+                            console.log(lista);
+                        }
+                        );
+
+                    } else {
+                        
+                        // tratar o erro 
+                        console.log("Erro na excecução");
+
+
+                    }
+
+                }
+
+                );
+
+    }
 
 
   
@@ -105,10 +164,13 @@ class ContatoController {
         let telefone = document.getElementById("telefone").value;
         
         
+        
          let item = {
             nomeCompleto: nomeCompleto,
-            telefone: telefone,
+            telefone: telefone
         };
+        
+   
         
         if(nomeCompleto == '') {
         alert('O campo nome é obrigatório');
@@ -117,6 +179,7 @@ class ContatoController {
         if(telefone == '') {
         alert('O campo telefone é obrigatório');
         }
+      
         
         if (id == "") {
             this.inserir(item);
@@ -150,11 +213,8 @@ class ContatoController {
     }   
 
     limpar(limpar) {
-        
-      
         document.getElementById("nomeCompleto").value = "";
         document.getElementById("telefone").value = "";
-        
 
     }
     

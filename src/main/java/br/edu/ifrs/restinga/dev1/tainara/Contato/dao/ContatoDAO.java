@@ -14,5 +14,6 @@ import org.springframework.data.repository.CrudRepository;
  * @author Suporte
  */
 public interface ContatoDAO extends CrudRepository<Contato, Integer>{
-    List <Contato> findByNomeCompletoContaining(String nome);
+    List <Contato> findByNomeCompletoContaining(String nomeCompleto);
+    List <Contato> findByTelefoneContaining(String telefone);
 }

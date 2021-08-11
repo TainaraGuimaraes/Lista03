@@ -95,4 +95,26 @@ public class Contatos {
         }
     }
     
+    @RequestMapping(path = "/contatos/pesquisa/nomeCompleto", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public Iterable<Contato> pesquisaNomeCompleto(
+            @RequestParam(required = false) String contem){
+        if(contem != null)
+            return contatoDAO.findByNomeCompletoContaining(contem);
+         else
+                throw new RequisicaoInvalida("Nome do contato nao encontrado");
+        
+    }
+    
+    @RequestMapping(path = "/contatos/pesquisa/telefone", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public Iterable<Contato> pesquisaTelefone(
+            @RequestParam(required = false) String contem){
+        if(contem != null)
+            return contatoDAO.findByTelefoneContaining(contem);
+         else
+                throw new RequisicaoInvalida("Telefone do contato nao encontrado");
+        
+    }
+    
 }
